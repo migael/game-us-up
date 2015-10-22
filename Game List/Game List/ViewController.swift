@@ -22,7 +22,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         super.viewDidLoad()
         
         self.pageTitles = NSArray(objects: "Page 1", "Page 2", "Page 3")
-        self.pageImages = NSArray(objects: "gamelist", "gamelist", "page3")
+        self.pageImages = NSArray(objects: "gamelist", "page1", "page3")
         
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
         
