@@ -9,11 +9,14 @@
 import Foundation
 
 class person {
-    var name = "name"
+    var name:String?
     var games = [game]()
+    var personid:String?
     
-    init(name:String, games:[game]){
+    init(name:String, games:[game],personid:String){
         self.name = name
         self.games = games
+        self.personid = personid
+        
     }
 }

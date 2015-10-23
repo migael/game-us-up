@@ -9,12 +9,14 @@
 import Foundation
 
 class game {
-    var name = "game"
-    var url = "image"
+    var name:String?
+    var url:String?
+    var gameid:String?
     
-    init (name:String, url:String){
+    init (name:String, url:String, gameid:String){
         self.name = name
         self.url = url
+        self.gameid = gameid
     }
     
 }

@@ -15,11 +15,13 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
     var pageImages: NSArray!
     var people:[person]?
     var groups:[group]?
-    
+    var adminpage = admin()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        adminpage.createFakeInfo()
         
         self.pageTitles = NSArray(objects: "Page 1", "Page 2", "Page 3")
         self.pageImages = NSArray(objects: "gamelist", "page1", "page3")
@@ -38,7 +40,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         self.addChildViewController(self.pageViewController)
         self.view.addSubview(self.pageViewController.view)
         self.pageViewController.didMoveToParentViewController(self)
-        
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 

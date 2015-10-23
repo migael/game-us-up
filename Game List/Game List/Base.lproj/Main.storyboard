@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3zR-m5-rmU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -96,10 +96,10 @@
             </objects>
             <point key="canvasLocation" x="1837" y="514"/>
         </scene>
-        <!--Root View Controller-->
+        <!--user controller-->
         <scene sceneID="iCe-F1-Mcz">
             <objects>
-                <tableViewController id="hGv-CU-EAe" sceneMemberID="viewController">
+                <tableViewController title="user controller" id="hGv-CU-EAe" customClass="TableViewController" customModule="Game_List" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="HdQ-hi-1pl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,7 +115,7 @@
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="uFv-fJ-fdR">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="uFv-fJ-fdR">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uFv-fJ-fdR" id="nKM-sH-xx3">
@@ -137,10 +137,10 @@
             </objects>
             <point key="canvasLocation" x="2556" y="1196"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller Groups-->
         <scene sceneID="ZrJ-Fr-Dtd">
             <objects>
-                <tableViewController id="QAt-1Y-Un4" sceneMemberID="viewController">
+                <tableViewController id="QAt-1Y-Un4" customClass="TableViewControllerGroups" customModule="Game_List" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jcH-rE-pmM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,10 +171,10 @@
             </objects>
             <point key="canvasLocation" x="3294" y="1196"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller Group-->
         <scene sceneID="k0e-Um-d2A">
             <objects>
-                <tableViewController id="3jO-xU-D3Z" sceneMemberID="viewController">
+                <tableViewController id="3jO-xU-D3Z" customClass="TableViewControllerGroup" customModule="Game_List" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nBZ-Z0-pKX">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

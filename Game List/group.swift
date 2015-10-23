@@ -9,13 +9,15 @@
 import Foundation
 
 class group {
-    var name = "name"
-    var games = [game]()
-    var people = [person]()
+    var name:String?
+    var games:[game]?
+    var people:[person]?
+    
     
     init(name:String, games:[game],people:[person]){
         self.name = name
         self.games = games
         self.people = people
     }
+    
 }
