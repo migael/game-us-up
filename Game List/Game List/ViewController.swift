@@ -15,18 +15,18 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
     var pageImages: NSArray!
     var people:[person]?
     var groups:[group]?
-    var adminpage = admin()
+   
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-<<<<<<< Updated upstream
+
         
-        adminpage.createFakeInfo()
         
-=======
+        
+
         self.view.backgroundColor = UIColor.clearColor()
->>>>>>> Stashed changes
+
         self.pageTitles = NSArray(objects: "Page 1", "Page 2", "Page 3")
         self.pageImages = NSArray(objects: "page1", "page2", "page3")
         

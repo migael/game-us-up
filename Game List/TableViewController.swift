@@ -10,15 +10,24 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    var allPeople = admin.allPeople
-    var loggedIn = admin.loggedIn
+    
+    var allpeople = [person]()
+    var loggedIn = "bob"
+    
+    /*
+    var
+    
+    var loggedIn = admin.returnLoggedIn()
+    
+*/
+    var adminpage = admin()
     
     var games = [game]()
-    var selectedperson = person(name: "name", games: [game](), personid: "aMdivided")
-
+    var selectedperson = person(name: "bob", games: [game](), personid: "aMdivided")
+    
 // wie is de logged in user?
     func selectuser(name:String){
-        for person in allPeople {
+        for person in self.allpeople {
             if (person.name == name){
                 selectedperson = person
             
@@ -31,7 +40,15 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // return admin vars
+        adminpage.createFakeInfo()
+        self.allpeople = adminpage.returnPeople()
+        self.loggedIn = adminpage.returnLoggedIn()
+        
+        
+        
+        selectuser(loggedIn)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -53,14 +70,14 @@ class TableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return games.count
+        return selectedperson.games.count
     }
 
 // vult de rijen met games van de selected persoon
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
 // bob logt in
-        selectuser(loggedIn)
+        
         // Configure the cell...
         var currentRow = indexPath.row
         var currentGames = self.selectedperson.games
@@ -69,7 +86,7 @@ class TableViewController: UITableViewController {
         
         
         
-
+        cell.textLabel?.text = currentGame.name
         return cell
     }
 
