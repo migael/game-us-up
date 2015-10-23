@@ -20,20 +20,24 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< Updated upstream
         
         adminpage.createFakeInfo()
         
+=======
+        self.view.backgroundColor = UIColor.clearColor()
+>>>>>>> Stashed changes
         self.pageTitles = NSArray(objects: "Page 1", "Page 2", "Page 3")
-        self.pageImages = NSArray(objects: "gamelist", "page1", "page3")
+        self.pageImages = NSArray(objects: "page1", "page2", "page3")
         
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
         
         self.pageViewController.dataSource = self
         
-        var startVC = self.viewControllerAtIndex(0) as! ContentViewController
-        var viewControllers = NSArray(object: startVC)
+        let startVC = self.viewControllerAtIndex(0) as ContentViewController
+        let viewControllers = NSArray(object: startVC)
         
-        self.pageViewController.setViewControllers(viewControllers as! [UIViewController], direction: .Forward, animated: true, completion: nil)
+        self.pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
         
         self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.size.height)
         
@@ -48,20 +52,13 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func restartAction(sender: AnyObject) {
-        var startVC = self.viewControllerAtIndex(0) as ContentViewController
-        var viewControllers = NSArray(object: startVC)
-        
-        self.pageViewController.setViewControllers(viewControllers as! [UIViewController], direction: .Forward, animated: true, completion: nil)
-    }
     
     func viewControllerAtIndex(index: Int) -> ContentViewController{
         if ((self.pageTitles.count ==  0) || (index >= self.pageTitles.count)){
             return ContentViewController()
         }
         
-        var vc: ContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ContentViewController") as! ContentViewController
+        let vc: ContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ContentViewController") as! ContentViewController
         
         vc.imageFile = self.pageImages[index] as! String
         vc.titleText = self.pageTitles[index] as! String
@@ -74,8 +71,8 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
     // MARK: - Page View Controller Data Source
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        var vc = viewController as! ContentViewController
-        var index = vc.pageIndex as! Int
+        let vc = viewController as! ContentViewController
+        var index = vc.pageIndex as Int
         
         if (index == 0 || index == NSNotFound)
         {
@@ -88,8 +85,8 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
-        var vc = viewController as! ContentViewController
-        var index = vc.pageIndex as! Int
+        let vc = viewController as! ContentViewController
+        var index = vc.pageIndex as Int
         
         if (index == NSNotFound){
             return nil
