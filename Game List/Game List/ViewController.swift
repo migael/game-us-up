@@ -20,8 +20,11 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< Updated upstream
 
         
+=======
+>>>>>>> Stashed changes
         
         
 
