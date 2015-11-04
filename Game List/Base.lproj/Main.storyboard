@@ -44,21 +44,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjA-Pk-0iA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjA-Pk-0iA">
                                 <rect key="frame" x="20" y="45" width="560" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vjb-82-uhD">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vjb-82-uhD">
                                 <rect key="frame" x="20" y="0.0" width="573" height="600"/>
                                 <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fq-JU-D1g">
-                                <rect key="frame" x="277" y="160" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fq-JU-D1g">
+                                <rect key="frame" x="264" y="136" width="75" height="75"/>
                                 <animations/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="start"/>
                                 <connections>
                                     <segue destination="bUv-1B-40I" kind="show" id="FCD-vh-mlQ"/>
                                 </connections>
@@ -69,8 +70,11 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="vjb-82-uhD" secondAttribute="trailing" id="2D2-qG-Fwu"/>
                             <constraint firstItem="vjb-82-uhD" firstAttribute="top" secondItem="h9X-h6-SS7" secondAttribute="top" id="3rV-HF-wD3"/>
+                            <constraint firstItem="9fq-JU-D1g" firstAttribute="centerX" secondItem="gjA-Pk-0iA" secondAttribute="centerX" id="AsF-ub-d4e"/>
+                            <constraint firstItem="gjA-Pk-0iA" firstAttribute="trailing" secondItem="h9X-h6-SS7" secondAttribute="trailingMargin" id="FYn-tT-pDG"/>
                             <constraint firstItem="gjA-Pk-0iA" firstAttribute="leading" secondItem="h9X-h6-SS7" secondAttribute="leadingMargin" id="O8R-AC-MP3"/>
                             <constraint firstItem="vjb-82-uhD" firstAttribute="leading" secondItem="h9X-h6-SS7" secondAttribute="leading" id="cPY-LK-7KH"/>
+                            <constraint firstItem="9fq-JU-D1g" firstAttribute="top" secondItem="gjA-Pk-0iA" secondAttribute="bottom" constant="94" id="hXE-uV-Dd9"/>
                             <constraint firstItem="vjb-82-uhD" firstAttribute="bottom" secondItem="BAY-nf-E0S" secondAttribute="top" id="tWz-MD-I1j"/>
                             <constraint firstItem="gjA-Pk-0iA" firstAttribute="top" secondItem="Not-8a-fgY" secondAttribute="bottom" constant="25" id="xev-Lk-aUa"/>
                         </constraints>
@@ -253,6 +257,9 @@
             <point key="canvasLocation" x="2556" y="184"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="start" width="75" height="75"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fmj-uo-96G"/>
     </inferredMetricsTieBreakers>
